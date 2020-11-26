@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 8
 Title ""
 Date ""
 Rev ""
@@ -14,80 +14,560 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L cao_comp:Capacitor C?
-U 1 1 5FBEA6CA
-P 6400 3100
-F 0 "C?" H 6585 3100 50  0000 L CNN
-F 1 "Capacitor" H 6400 3450 50  0001 C CNN
-F 2 "" H 6400 3300 50  0001 C CNN
-F 3 "" H 6400 3300 50  0001 C CNN
-	1    6400 3100
+L cao_comp:ATmega328P-AU U1
+U 1 1 5FBF75F9
+P 2250 2050
+F 0 "U1" H 1900 2650 50  0000 C CNN
+F 1 "ATmega328P-AU" H 2600 2650 50  0000 C CNN
+F 2 "" H 2250 2050 50  0001 C CNN
+F 3 "" H 2250 2050 50  0001 C CNN
+	1    2250 2050
 	1    0    0    -1  
 $EndComp
 $Comp
-L cao_comp:LED D?
-U 1 1 5FBEAA8D
-P 7000 3100
-F 0 "D?" H 7235 3147 50  0000 L CNN
-F 1 "LED" H 7000 3450 50  0001 C CNN
-F 2 "" H 7000 3300 50  0001 C CNN
-F 3 "" H 7000 3300 50  0001 C CNN
-	1    7000 3100
+L cao_comp:AVR-ISP-6 J2
+U 1 1 5FBF9DC1
+P 6800 1100
+F 0 "J2" H 7000 1500 50  0000 L CNN
+F 1 "AVR-ISP-6" H 6400 1500 50  0000 L CNN
+F 2 "" H 6800 1100 50  0001 C CNN
+F 3 "" H 6800 1100 50  0001 C CNN
+	1    6800 1100
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5150 1750 500  150 
+U 5FC03ED2
+F0 "led_0" 50
+F1 "led.sch" 50
+F2 "input" I L 5150 1850 50 
+$EndSheet
+$Comp
+L cao_comp:MountingHole H1
+U 1 1 5FBF3918
+P 6900 3250
+F 0 "H1" H 7020 3296 50  0000 L CNN
+F 1 "MountingHole" H 7020 3205 50  0000 L CNN
+F 2 "" H 6900 3250 50  0001 C CNN
+F 3 "" H 6900 3250 50  0001 C CNN
+	1    6900 3250
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5150 2100 500  150 
+U 5FC25D47
+F0 "led_1" 50
+F1 "led.sch" 50
+F2 "input" I L 5150 2200 50 
+$EndSheet
+$Sheet
+S 5150 2450 500  150 
+U 5FC261EB
+F0 "led_2" 50
+F1 "led.sch" 50
+F2 "input" I L 5150 2550 50 
+$EndSheet
+$Sheet
+S 5150 2800 500  150 
+U 5FC26691
+F0 "led_3" 50
+F1 "led.sch" 50
+F2 "input" I L 5150 2900 50 
+$EndSheet
+$Sheet
+S 5150 3150 500  500 
+U 5FC29BBE
+F0 "usb_flasher" 50
+F1 "usb_flasher.sch" 50
+F2 "tx" I L 5150 3250 50 
+F3 "rx" I L 5150 3350 50 
+F4 "reset" I L 5150 3450 50 
+$EndSheet
+$Sheet
+S 5150 3850 500  150 
+U 5FC30220
+F0 "button_reset" 50
+F1 "button.sch" 50
+F2 "out" I L 5150 3900 50 
+$EndSheet
+$Sheet
+S 5150 4200 500  150 
+U 5FC31A06
+F0 "button_but0" 50
+F1 "button.sch" 50
+F2 "out" I L 5150 4250 50 
+$EndSheet
+$Comp
+L cao_comp:Quartz Y1
+U 1 1 5FC34992
+P 3800 2500
+F 0 "Y1" H 3750 2500 50  0000 L CNN
+F 1 "Quartz" H 3800 2750 50  0001 C CNN
+F 2 "" H 3800 2500 50  0001 C CNN
+F 3 "" H 3800 2500 50  0001 C CNN
+	1    3800 2500
 	1    0    0    -1  
 $EndComp
 $Comp
-L cao_comp:Resistor R?
-U 1 1 5FBEB08F
-P 5850 3100
-F 0 "R?" H 5800 3250 50  0000 L CNN
-F 1 "Resistor" H 6003 3055 50  0000 L CNN
-F 2 "" H 5850 3100 50  0001 C CNN
-F 3 "" H 5850 3100 50  0001 C CNN
-	1    5850 3100
+L cao_comp:Ground GND4
+U 1 1 5FC352B4
+P 3800 3100
+F 0 "GND4" H 3929 3108 50  0000 L CNN
+F 1 "Ground" H 3800 3450 50  0001 C CNN
+F 2 "" H 3800 3100 50  0001 C CNN
+F 3 "" H 3800 3100 50  0001 C CNN
+	1    3800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3000 4150 3000
+Wire Wire Line
+	4150 3000 4150 2900
+Wire Wire Line
+	3800 3000 3500 3000
+Wire Wire Line
+	3500 3000 3500 2900
+Connection ~ 3800 3000
+Wire Wire Line
+	4150 2500 4000 2500
+Wire Wire Line
+	3500 2500 3600 2500
+Wire Wire Line
+	3500 2500 3500 2450
+Wire Wire Line
+	3500 2000 4150 2000
+$Comp
+L cao_comp:Ground GND3
+U 1 1 5FC3ABA5
+P 3800 2150
+F 0 "GND3" H 3700 2100 50  0000 R CNN
+F 1 "Ground" H 3800 2500 50  0001 C CNN
+F 2 "" H 3800 2150 50  0001 C CNN
+F 3 "" H 3800 2150 50  0001 C CNN
+	1    3800 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 2000 3500 2350
+Wire Wire Line
+	4150 2000 4150 2500
+Entry Bus Bus
+	4200 3300 4300 3400
+Entry Bus Bus
+	3450 3400 3550 3300
+Wire Bus Line
+	3550 3300 4200 3300
+Wire Wire Line
+	3150 3150 3150 3450
+Entry Wire Line
+	3350 3450 3450 3550
+Wire Wire Line
+	3350 3450 3150 3450
+Wire Wire Line
+	3100 3250 3100 3500
+Wire Wire Line
+	3100 3500 3350 3500
+Wire Wire Line
+	3050 3350 3050 3550
+Wire Wire Line
+	3050 3550 3350 3550
+Wire Wire Line
+	3000 3550 3000 3600
+Wire Wire Line
+	3000 3600 3350 3600
+Entry Wire Line
+	3350 3500 3450 3600
+Entry Wire Line
+	3350 3550 3450 3650
+Entry Wire Line
+	3350 3600 3450 3700
+Wire Wire Line
+	2600 3550 3000 3550
+Wire Wire Line
+	2600 3350 3050 3350
+Wire Wire Line
+	2600 3250 3100 3250
+Wire Wire Line
+	2600 3150 3150 3150
+Wire Wire Line
+	2600 2450 3500 2450
+Wire Wire Line
+	2600 2350 3500 2350
+Text Label 2850 3150 2    50   ~ 0
+RESET
+Text Label 2900 3250 2    50   ~ 0
+MCU_TX
+Text Label 2900 3350 2    50   ~ 0
+MCU_RX
+Text Label 2850 3550 2    50   ~ 0
+BUT_0
+Entry Wire Line
+	4300 3600 4400 3500
+Wire Wire Line
+	4400 3250 4400 3500
+Wire Wire Line
+	4400 3250 5150 3250
+Entry Wire Line
+	4300 3650 4400 3550
+Entry Wire Line
+	4300 3700 4400 3600
+Wire Wire Line
+	5150 3350 4450 3350
+Wire Wire Line
+	4450 3350 4450 3550
+Wire Wire Line
+	4450 3550 4400 3550
+Wire Wire Line
+	5150 3450 4500 3450
+Wire Wire Line
+	4500 3450 4500 3600
+Wire Wire Line
+	4500 3600 4400 3600
+Entry Wire Line
+	4300 4000 4400 3900
+Entry Wire Line
+	4300 4350 4400 4250
+Wire Wire Line
+	5150 3900 4400 3900
+Wire Wire Line
+	5150 4250 4400 4250
+Text Label 5100 3250 2    50   ~ 0
+RESET
+Text Label 5100 3350 2    50   ~ 0
+MCU_TX
+Text Label 5100 3450 2    50   ~ 0
+MCU_RX
+Text Label 5100 3900 2    50   ~ 0
+RESET
+Text Label 5100 4250 2    50   ~ 0
+BUT_0
+Wire Wire Line
+	3800 2750 3800 3000
+Entry Bus Bus
+	4450 1450 4550 1550
+Entry Bus Bus
+	3400 1550 3500 1450
+Wire Bus Line
+	3500 1450 4450 1450
+Entry Wire Line
+	3300 1750 3400 1650
+Entry Wire Line
+	3300 1850 3400 1750
+Entry Wire Line
+	3300 1950 3400 1850
+Entry Wire Line
+	3300 2050 3400 1950
+Wire Wire Line
+	3300 1750 2600 1750
+Wire Wire Line
+	2600 1850 3300 1850
+Wire Wire Line
+	2600 1950 3300 1950
+Wire Wire Line
+	2600 2050 3300 2050
+Entry Wire Line
+	4550 1750 4650 1850
+Entry Wire Line
+	4550 2100 4650 2200
+Entry Wire Line
+	4550 2450 4650 2550
+Entry Wire Line
+	4550 2800 4650 2900
+Wire Wire Line
+	4650 1850 5150 1850
+Wire Wire Line
+	4650 2550 5150 2550
+Wire Wire Line
+	4650 2200 5150 2200
+Wire Wire Line
+	4650 2900 5150 2900
+Text Label 2850 1750 2    50   ~ 0
+LED_0
+Text Label 2850 1850 2    50   ~ 0
+LED_1
+Text Label 2850 1950 2    50   ~ 0
+LED_2
+Text Label 2850 2050 2    50   ~ 0
+LED_3
+Text Label 5100 1850 2    50   ~ 0
+LED_0
+Text Label 5100 2200 2    50   ~ 0
+LED_1
+Text Label 5100 2550 2    50   ~ 0
+LED_2
+Text Label 5100 2900 2    50   ~ 0
+LED_3
+$Comp
+L cao_comp:Capacitor C4
+U 1 1 5FC90158
+P 3150 950
+F 0 "C4" V 3104 1095 50  0000 L CNN
+F 1 "100nF" V 3195 1095 50  0000 L CNN
+F 2 "" H 3150 1150 50  0001 C CNN
+F 3 "" H 3150 1150 50  0001 C CNN
+	1    3150 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L cao_comp:Capacitor C5
+U 1 1 5FC928FB
+P 2750 950
+F 0 "C5" V 2700 600 50  0000 L CNN
+F 1 "10uF" V 2800 550 50  0000 L CNN
+F 2 "" H 2750 1150 50  0001 C CNN
+F 3 "" H 2750 1150 50  0001 C CNN
+	1    2750 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L cao_comp:Ground GND2
+U 1 1 5FC931C6
+P 3150 1400
+F 0 "GND2" H 3279 1408 50  0000 L CNN
+F 1 "Ground" H 3150 1750 50  0001 C CNN
+F 2 "" H 3150 1400 50  0001 C CNN
+F 3 "" H 3150 1400 50  0001 C CNN
+	1    3150 1400
 	1    0    0    -1  
 $EndComp
 $Comp
-L cao_comp:Quartz Y?
-U 1 1 5FBECC1D
-P 5800 3450
-F 0 "Y?" H 5750 3600 50  0000 L CNN
-F 1 "Quartz" H 5800 3600 50  0001 C CNN
-F 2 "" H 5800 3450 50  0001 C CNN
-F 3 "" H 5800 3450 50  0001 C CNN
-	1    5800 3450
+L cao_comp:+5V U4
+U 1 1 5FC936C7
+P 3150 650
+F 0 "U4" H 3150 650 50  0001 C CNN
+F 1 "+5V" H 3202 705 50  0000 L CNN
+F 2 "" H 3150 650 50  0001 C CNN
+F 3 "" H 3150 650 50  0001 C CNN
+	1    3150 650 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 800  2750 650 
+Wire Wire Line
+	2750 650  3150 650 
+Wire Wire Line
+	3150 800  3150 650 
+Connection ~ 3150 650 
+Wire Wire Line
+	3150 1100 3150 1250
+Wire Wire Line
+	2750 1100 2750 1250
+Wire Wire Line
+	2750 1250 3150 1250
+Connection ~ 3150 1250
+Wire Wire Line
+	3150 1250 3150 1300
+$Comp
+L cao_comp:+5V U3
+U 1 1 5FC9DC71
+P 2150 1300
+F 0 "U3" H 2150 1300 50  0001 C CNN
+F 1 "+5V" H 2202 1355 50  0000 L CNN
+F 2 "" H 2150 1300 50  0001 C CNN
+F 3 "" H 2150 1300 50  0001 C CNN
+	1    2150 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L cao_comp:Quartz Y?
-U 1 1 5FBEDFFF
-P 5850 2600
-F 0 "Y?" H 6035 2646 50  0000 L CNN
-F 1 "Quartz" H 6035 2555 50  0000 L CNN
-F 2 "" H 5850 2600 50  0001 C CNN
-F 3 "" H 5850 2600 50  0001 C CNN
-	1    5850 2600
+L cao_comp:+5V U2
+U 1 1 5FC9E0D5
+P 1500 1700
+F 0 "U2" H 1500 1700 50  0001 C CNN
+F 1 "+5V" H 1552 1755 50  0000 L CNN
+F 2 "" H 1500 1700 50  0001 C CNN
+F 3 "" H 1500 1700 50  0001 C CNN
+	1    1500 1700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 3450 6350 3450
+	2250 1400 2150 1400
 Wire Wire Line
-	6350 3450 6350 3850
+	2150 1400 2150 1300
+Connection ~ 2150 1400
 Wire Wire Line
-	6350 3850 5450 3850
+	1500 1700 1500 1750
 Wire Wire Line
-	5450 3850 5450 3450
+	1500 1750 1750 1750
+$Comp
+L cao_comp:Ground GND1
+U 1 1 5FCAFCFA
+P 2150 4450
+F 0 "GND1" H 2279 4458 50  0000 L CNN
+F 1 "Ground" H 2150 4800 50  0001 C CNN
+F 2 "" H 2150 4450 50  0001 C CNN
+F 3 "" H 2150 4450 50  0001 C CNN
+	1    2150 4450
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	5450 3450 5600 3450
+	2150 4350 2150 4200
+$Comp
+L cao_comp:PWR_FLAG P1
+U 1 1 5FCB6C93
+P 6600 4500
+F 0 "P1" H 6850 4725 50  0001 C CNN
+F 1 "PWR_FLAG" H 6678 4558 50  0000 L CNN
+F 2 "" H 6600 4500 50  0001 C CNN
+F 3 "" H 6600 4500 50  0001 C CNN
+	1    6600 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L cao_comp:PWR_FLAG P2
+U 1 1 5FCB70D8
+P 7200 4150
+F 0 "P2" H 7450 4375 50  0001 C CNN
+F 1 "PWR_FLAG" H 7112 4208 50  0000 R CNN
+F 2 "" H 7200 4150 50  0001 C CNN
+F 3 "" H 7200 4150 50  0001 C CNN
+	1    7200 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L cao_comp:+5V U5
+U 1 1 5FCB75D4
+P 6600 4250
+F 0 "U5" H 6600 4250 50  0001 C CNN
+F 1 "+5V" H 6652 4305 50  0000 L CNN
+F 2 "" H 6600 4250 50  0001 C CNN
+F 3 "" H 6600 4250 50  0001 C CNN
+	1    6600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L cao_comp:Ground GND6
+U 1 1 5FCB7A54
+P 7200 4450
+F 0 "GND6" H 7329 4458 50  0000 L CNN
+F 1 "Ground" H 7200 4800 50  0001 C CNN
+F 2 "" H 7200 4450 50  0001 C CNN
+F 3 "" H 7200 4450 50  0001 C CNN
+	1    7200 4450
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	6800 3400 6800 3100
+	7200 4300 7200 4350
 Wire Wire Line
-	7200 3100 7200 3400
+	6600 4350 6600 4250
+Text Label 6400 900  2    50   ~ 0
+MISO
+Text Label 6400 1000 2    50   ~ 0
+MOSI
+Text Label 6400 1100 2    50   ~ 0
+SCK
+Text Label 6400 1200 2    50   ~ 0
+RESET
+$Comp
+L cao_comp:+5V U6
+U 1 1 5FCCDDFB
+P 6900 650
+F 0 "U6" H 6900 650 50  0001 C CNN
+F 1 "+5V" H 6952 705 50  0000 L CNN
+F 2 "" H 6900 650 50  0001 C CNN
+F 3 "" H 6900 650 50  0001 C CNN
+	1    6900 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L cao_comp:Ground GND5
+U 1 1 5FCCE3F6
+P 6900 1500
+F 0 "GND5" H 7029 1508 50  0000 L CNN
+F 1 "Ground" H 6900 1850 50  0001 C CNN
+F 2 "" H 6900 1500 50  0001 C CNN
+F 3 "" H 6900 1500 50  0001 C CNN
+	1    6900 1500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2600 2550
+NoConn ~ 2600 2650
+NoConn ~ 2600 2750
+NoConn ~ 2600 2850
+NoConn ~ 2600 2950
+NoConn ~ 2600 3050
+NoConn ~ 2600 3450
+NoConn ~ 2600 3650
+NoConn ~ 2600 3750
+NoConn ~ 2600 3850
+NoConn ~ 2600 3950
+NoConn ~ 1750 1850
+NoConn ~ 1750 1950
 Wire Wire Line
-	6800 3400 7200 3400
+	3500 2600 3500 2500
+Connection ~ 3500 2500
 Wire Wire Line
-	6550 3100 6550 2850
-Wire Wire Line
-	6550 2850 6250 2850
-Wire Wire Line
-	6250 2850 6250 3100
+	4150 2600 4150 2500
+Connection ~ 4150 2500
+$Comp
+L cao_comp:Capacitor C2
+U 1 1 5FD00ADC
+P 4150 2750
+F 0 "C2" V 4104 2895 50  0000 L CNN
+F 1 "22pF" V 4195 2895 50  0000 L CNN
+F 2 "" H 4150 2950 50  0001 C CNN
+F 3 "" H 4150 2950 50  0001 C CNN
+	1    4150 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L cao_comp:Capacitor C1
+U 1 1 5FD00E0B
+P 3500 2750
+F 0 "C1" V 3454 2895 50  0000 L CNN
+F 1 "22pF" V 3545 2895 50  0000 L CNN
+F 2 "" H 3500 2950 50  0001 C CNN
+F 3 "" H 3500 2950 50  0001 C CNN
+	1    3500 2750
+	0    1    1    0   
+$EndComp
+Text Label 2650 2450 0    50   ~ 0
+XTAL2
+Text Label 2650 2350 0    50   ~ 0
+XTAL1
+Text Label 2950 2050 0    50   ~ 0
+MOSI
+Text Label 2600 2150 0    50   ~ 0
+MISO
+Text Label 2600 2250 0    50   ~ 0
+SCK
+Wire Bus Line
+	4550 2800 4550 2900
+Wire Bus Line
+	4550 2450 4550 2800
+Wire Bus Line
+	4550 2100 4550 2450
+Wire Bus Line
+	3400 1950 3400 2050
+Wire Bus Line
+	3400 1850 3400 1950
+Wire Bus Line
+	3400 1750 3400 1850
+Wire Bus Line
+	4300 4000 4300 4350
+Wire Bus Line
+	4300 3700 4300 4000
+Wire Bus Line
+	4300 3650 4300 3700
+Wire Bus Line
+	3450 3700 3450 3850
+Wire Bus Line
+	3450 3650 3450 3700
+Wire Bus Line
+	3450 3600 3450 3650
+Wire Bus Line
+	3450 3550 3450 3600
+Wire Bus Line
+	3450 3400 3450 3550
+Wire Bus Line
+	4300 3600 4300 3650
+Wire Bus Line
+	4300 3400 4300 3600
+Wire Bus Line
+	3400 1650 3400 1750
+Wire Bus Line
+	3400 1550 3400 1650
+Wire Bus Line
+	4550 1750 4550 2100
+Wire Bus Line
+	4550 1550 4550 1750
 $EndSCHEMATC
